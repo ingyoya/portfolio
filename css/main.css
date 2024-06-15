@@ -185,7 +185,8 @@
 	font-weight: 700;
 	transition: background 0.5s;
 }
-#main .project .prj_desc .btn a:hover {background: #333; color: #fff;}
+#main .project .prj_desc .btn a:hover {background:#00ff89; border: none; border: 1px solid #00ff89;}
+#main .project .prj_desc .btn a:nth-child(2):hover {background:#ffdbeb; border: none; border: 1px solid #ffdbeb;}
 
 
 

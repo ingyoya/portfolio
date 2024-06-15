@@ -53,3 +53,27 @@
 	font-size: 10rem;
 }
 
+@media (max-width:1700px){}
+@media (max-width:1500px){}
+@media (max-width:1300px){}
+@media (max-width:1280px){}
+@media (max-width:1024px){
+	.kanit-bold {font-size: 8rem;}
+}
+@media (max-width:768px){
+	.kanit-bold {font-size: 6rem;}
+}
+@media (max-width:595px){
+	.kanit-bold {font-size: 5rem;}
+}
+@media (max-width:500px){
+	.kanit-bold {font-size: 5rem;}
+	.kr_h3 {font-size: 2.4rem;}
+}
+@media (max-width:375px){
+	.kanit-bold {font-size: 3.6rem;}
+	.kr_h2 {font-size: 3rem;}
+	.kr_h3 {font-size: 2rem;}
+	.kr_p1 {font-size: 1.4rem;}
+}
+	
