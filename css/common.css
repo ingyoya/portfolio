@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+
+	width: 100%;
+	height: 70px;
+	background: rgba(255, 255, 255, 0.8);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	transition: box-shadow 0.5s, background 0.5s;
+}
+#header:hover {
+	background : rgba(255, 255, 255, 1);
+	box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+#header .inner  {
+	display: flex;
+	width: 128rem; 
+	flex-direction: row-reverse;
+}
+
+
+
+#header .gnb {display: flex;  gap: 25px;}
+#header .gnb li {width: 100px; text-align: right;}
+#header .gnb li a {display: block; padding: 25px 0; color: rgba(0, 0, 0, 0.5); transition: color 0.5s;}
+#header .gnb li a:hover {color: rgba(0, 0, 0, 1); }
+
+
+
+#header .ham_box {
+	display: none;
+	cursor: pointer;
+	
+	position: absolute;
+
+	padding: 20px;
+
+}
+#header .ham_box .ham_btn li {
+	display: block; 
+	width: 35px; height: 4px; 
+	border-radius: 2px;
+	background-color: #333; 
+
+	margin: 5px 0; 
+}
+
+#header .close {
+	cursor: pointer;
+	display: none;
+
+	position: absolute;
+	transform: translate(-15px,15px);
+	
+	
+	padding: 20px;
+}
+#header .close .close_btn li {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+
+	display: block; 
+	width: 35px; height: 3.5px; 
+	background-color: #333; 
+	border-radius: 2px;
+}
+#header .close .close_btn li:nth-child(1) {transform: rotate(45deg) }
+#header .close .close_btn li:nth-child(2) {transform: rotate(-45deg)}
+
+#header .sitemap {
+	z-index: 99;
+	position: absolute;
+	right: -300px;
+	top: 70px;
+	
+	
+	width: 300px;
+	height: 100vh;
+	text-align: right;
+	background: #fff;
+
+	transition: right 0.5s;
+}
+#header .sitemap.on {
+	right: 0;
+}
+#header .sitemap.off{
+	right: -300px;
+}
+
+
+#header .sitemap > h3 {padding: 20px;}
+#header .sitemap .sitemap_gnb > li a {
+	display: block; 
+	padding: 20px; 
+	color: rgba(0, 0, 0, 0.5); 
+	transition: color 0.5s, border-bottom 0.5s; 
+	font-weight: 700; 
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+#header .sitemap .sitemap_gnb > li a:hover {color: rgba(0, 0, 0, 1); border-bottom: 1px solid rgba(0, 0, 0, 0.5);}
+#header .sitemap .sitemap_gnb .sitemap_depth2 > li a {display: block; padding: 20px; font-weight: 400;}
+
+
+#footer {width: 100%;background-color:  #333; color: #fff; text-align: center;}
+#footer .inner {padding: 80px;}
+#footer img {width: 8vw; margin-bottom: 20px;}
+
+
+@media (max-width:1700px){
+	#header .inner {width: 80% ; }
+
+}
+
+@media (max-width:1280px){
+	#header .inner {width: 90% ; }
+
+}
+
+@media (max-width:1024px){
+	#header .gnb {display: none;}
+	#header .ham_box{display: block;}
+	/* #header .sitemap .sitemap_depth2 {display: none;} */
+}
